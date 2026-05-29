@@ -1,0 +1,24 @@
+{
+  "name": "green-day",
+  "version": "1.0.0",
+  "description": "site parecido com steam/eneba pra achar jogo",
+  "homepage": "https://github.com/eraldorv/greenday#readme",
+  "bugs": {
+    "url": "https://github.com/eraldorv/greenday/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eraldorv/greenday.git"
+  },
+  "license": "ISC",
+  "author": "eraldo icaro alisson e guilherme",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^42.3.0"
+  }
+}

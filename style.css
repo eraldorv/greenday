@@ -1,0 +1,38 @@
+body {
+    background-color: rgb(66, 43, 194);
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    gap: 20px;     
+}
+
+.aba-recomendados{
+    background-color: rgb(79, 26, 175);
+    border-radius: 5px;
+    box-shadow: 0;
+
+    padding: 20px;
+    flex-wrap: wrap; 
+    display: flex;
+}
+
+.card-recomendados{
+    text-align: center;
+    background-color: white;
+    border-radius: 2px;
+    height: 200px;
+    width: 150px;
+    margin: 10px 0 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.card-recomendados:hover{
+    background-color: rgb(0, 0, 0);
+    color:white;
+    transform: scale(1.05);
+}
