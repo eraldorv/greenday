@@ -1,2 +1,3 @@
 # greenday
-site parecido com a steam/eneba pro trabalho em grupo do grau tec
+<img src="assets/greendaylogo.png" width="215px">
+site de ver filme gratuito etc projeto do grau tec
