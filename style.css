@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    display: flex;
+    display: auto;
     align-items: center;
     justify-content: space-between;
     gap: 12px;
@@ -38,18 +38,18 @@ header h1 {
 
 h1 { 
     color: white;
-    margin: 40px 0px 0px 0px;
+    margin: 60px 0px 0px 60px;
 }
 
 h3 {
     color: white;
-    margin: 100px 0px 0px 0px;
+    margin: 90px 0px 0px 0px;
     font-style: italic;
 }
 
 ul {
     list-style-type: none;
-    margin: 10px 40px 0 1200px;
+    margin: 0px 40px 10px 1200px;
     padding: 0;
     display: flex;
     gap: 20px;
@@ -67,12 +67,13 @@ ul li a {
 
 
 .aba-recomendados{
-    border-radius: 5px;
-    box-shadow: 0;
-    padding: 5px;
-    flex-wrap: wrap; 
+    margin: 10px 5x 10px 5px;
     display: flex;
-    gap: 5px;
+    grid-template-columns: repeat(5, 0fr); 
+    gap: 5px;            
+    padding: 20px 0 0 60px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .card-recomendados{
@@ -112,20 +113,44 @@ ul li a {
 }
 
 .container-catalogo {
-    display: flex;
-    grid-template-columns: repeat(5, 0fr); 
-    gap: 5px;            
-    padding: 120px 0 0 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;            
+    padding: 200px 0px 20px 20px;
     width: 100%;
     box-sizing: border-box;
+}
+
+@media (max-width: 1400px) {
+    .container-catalogo {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1000px) {
+    .container-catalogo {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .container-catalogo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .container-catalogo {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 
 .card-catalogo {
     text-align: center;
     border: 1px solid #2d5c1f;
-     height: 290px;
-    width: 200px;
+     height: 370px;
+    width: 250px;
     transition: transform 0.3s ease;
     padding: 10px;
     box-sizing: border-box;
@@ -154,4 +179,29 @@ ul li a {
     border-color: #55e837;
     transform: scale(1.05);
     cursor: pointer;
+}
+
+.carrossel-btn {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    border: none;
+    font-size: 23px;
+    padding: 129px 20px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.carrossel-btn:hover {
+    background-color: rgba(21, 124, 21, 0.315);
+}
+
+.btn-esquerdo {
+    left: 5px;
+}
+
+.btn-direito {
+    right: 5px;
 }
