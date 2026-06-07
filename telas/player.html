@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player - Green Day</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <img src="../assets/greendaylogo.png" alt="Logo do site">
+    <h1>Green Day</h1>
+    <ul>
+      <li><a href="home.html">INÍCIO</a></li>
+      <li><a href="catalogo.html">CATÁLOGO</a></li>
+      <li><a href="sobre.html">SOBRE</a></li>
+    </ul>
+  </header>
+
+  <section class="movie-section">
+    <div class="player-header">
+      <img id="player-image" class="player-cover" src="" alt="Capa do filme">
+      <div class="player-info">
+        <h2 id="player-title">Carregando filme...</h2>
+        <p id="player-genres" class="player-genres"></p>
+        <p id="player-rating" class="player-details"></p>
+        <p id="player-runtime" class="player-details"></p>
+        <p id="player-overview" class="player-overview"></p>
+        <a class="button-link" href="catalogo.html">Voltar ao catálogo</a>
+      </div>
+    </div>
+
+    <div id="movie-status" class="movie-status">O player será carregado a seguir.</div>
+    <div class="player-wrapper">
+      <iframe id="movie-player" class="movie-player" src="" frameborder="0" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <script src="../renderer.js"></script>
+</body>
+</html>

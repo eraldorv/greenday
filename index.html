@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,59 +9,54 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
+<body class="login-page">
+
+    <div class="container">
         <img src="assets/greendaylogo.png" alt="Logo do site">
-        <h1>Green Day</h1>
-<ul>
-    <li><a href="index.html">INÍCIO</a></li>
-    <li><a href="telas/catalogo.html">CATÁLOGO</a></li>
-    <li><a href="telas/sobre.html">SOBRE</a></li>
-</ul>
-    </header>
-<h3> A melhor opção de filmes gratuitos para agora. </h3>
+        <div id="tela-login" class="box">
+            <h2>Entrar</h2>
+            <div id="erro-login" class="error-box"></div>
+            <form id="form-login">
+                <div class="input-group">
+                    <label>E-mail</label>
+                    <input type="text" id="login-email" placeholder="Digite seu e-mail">
+                </div>
+                <div class="input-group">
+                    <label>Senha</label>
+                    <input type="password" id="login-senha" placeholder="Digite sua senha">
+                </div>
+                <button type="submit" class="btn">Acessar</button>
+            </form>
+            <p class="switch">Não tem uma conta? <a href="#" id="ir-para-cadastro">Cadastre-se</a></p>
+        </div>
 
-<h1>RECOMENDADOS</h1>
-
-<div class="aba-recomendados" id="carrossel-trilho">
-
-    <button class="carrossel-btn btn-esquerdo" id="btn-ant">&#10094;</button>
-   
-    <div class="card-recomendados">
-        <h3>The Shawshank Redemption</h3>
-        <p class="nota-filme">IMDb: 9.3</p>
-    </div>
-    <div class="card-recomendados">
-        <h3>The Dark Knight</h3>
-        <p class="nota-filme">IMDb: 9.0</p>
-    </div>
-    <div class="card-recomendados">
-        <h3>Inception</h3>
-        <p class="nota-filme">IMDb: 8.8</p>
-    </div>
-    <div class="card-recomendados">
-        <h3>Pulp Fiction</h3>
-        <p class="nota-filme">IMDb: 8.9</p>
-    </div>
-    <div class="card-recomendados">
-        <h3>Forrest Gump</h3>
-        <p class="nota-filme">IMDb: 8.8</p>
-    </div>
-    <div class="card-recomendados">
-        <h3>The Matrix</h3>
-        <p class="nota-filme">IMDb: 8.7</p>
-    </div>
-    <div class="card-recomendados">
-        <h3>Interstellar</h3>
-        <p class="nota-filme">IMDb: 8.6</p>
-    </div>
-    <div class="card-recomendados">
-        <h3>The Godfather</h3>
-        <p class="nota-filme">IMDb: 9.2</p>
+        <div id="tela-cadastro" class="box hidden">
+            <h2>Criar Conta</h2>
+            <div id="erro-cadastro" class="error-box"></div>
+            <div id="sucesso-cadastro" class="success-box"></div>
+            <form id="form-cadastro">
+                <div class="input-group">
+                    <label>Nome Completo</label>
+                    <input type="text" id="cad-nome" placeholder="Ex: João Silva">
+                </div>
+                <div class="input-group">
+                    <label>Data de Nascimento</label>
+                    <input type="date" id="cad-data">
+                </div>
+                <div class="input-group">
+                    <label>E-mail</label>
+                    <input type="text" id="cad-email" placeholder="Ex: joao@email.com">
+                </div>
+                <div class="input-group">
+                    <label>Senha</label>
+                    <input type="password" id="cad-senha" placeholder="Mínimo 6 dígitos (letras e números)">
+                </div>
+                <button type="submit" class="btn">Finalizar Cadastro</button>
+            </form>
+            <p class="switch">Já possui cadastro? <a href="#" id="ir-para-login">Fazer Login</a></p>
+        </div>
     </div>
 
-<button class="carrossel-btn btn-direito" id="btn-prox">&#10095;</button>
-</div>
-<script src="renderer.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
