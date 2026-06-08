@@ -1,24 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Day</title>
-     <link rel="stylesheet" href="../style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre - Green Day</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img src="../assets/greendaylogo.png" alt="Logo do site">
-        <h1>Green Day</h1>
-<ul>
-    <li><a href="home.html">INÍCIO</a></li>
-    <li><a href="catalogo.html">CATÁLOGO</a></li>
-    <li><a href="sobre.html">SOBRE</a></li>
-</ul>
-    </header>
-    <script src="../renderer.js"></script>
+  <header>
+    <div class="brand">
+      <img src="../assets/greendaylogo.png" alt="Logo do site">
+      <h1>Green Day</h1>
+    </div>
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li><a href="home.html">INÍCIO</a></li>
+        <li><a href="catalogo.html">CATÁLOGO</a></li>
+        <li><a href="sobre.html">SOBRE</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <h2>Sobre</h2>
+      <p>Informações gerais sobre o projeto Green Day.</p>
+    </section>
+
+    <section class="site-info">
+      <h2>Como o projeto funciona</h2>
+      <p>Os filmes ficam cadastrados no arquivo <strong>renderer.js</strong>, dentro da lista <strong>movieCatalog</strong>. As páginas leem essa lista para montar automaticamente os recomendados, os recentes, o catálogo e o player.</p>
+      <h3>Como editar</h3>
+      <p>Para adicionar filmes, abra <strong>renderer.js</strong>, copie um objeto da lista, troque as informações e salve. As instruções estão comentadas no começo do arquivo.</p>
+    </section>
+  </main>
+
+  <script src="../renderer.js"></script>
 </body>
 </html>

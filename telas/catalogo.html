@@ -1,27 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Day</title>
-     <link rel="stylesheet" href="../style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo - Green Day</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img src="../assets/greendaylogo.png" alt="Logo do site">
-        <h1>Green Day</h1>
-<ul>
-    <li><a href="home.html">INÍCIO</a></li>
-    <li><a href="catalogo.html">CATÁLOGO</a></li>
-    <li><a href="sobre.html">SOBRE</a></li>
-</ul>
-    </header>
+  <header>
+    <div class="brand">
+      <img src="../assets/greendaylogo.png" alt="Logo do site">
+      <h1>Green Day</h1>
+    </div>
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li><a href="home.html">INÍCIO</a></li>
+        <li><a href="catalogo.html">CATÁLOGO</a></li>
+        <li><a href="sobre.html">SOBRE</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<div id="movies-container" class="container-catalogo"></div>
+  <main>
+    <section class="page-intro">
+      <h2>Catálogo</h2>
+      <p>Todos os filmes disponíveis no projeto.</p>
+    </section>
 
-<script src="../renderer.js"></script>
+    <div id="movies-container" class="container-catalogo"></div>
+  </main>
+
+  <script src="../renderer.js"></script>
 </body>
 </html>

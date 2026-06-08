@@ -1,34 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Day</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Day</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img src="../assets/greendaylogo.png" alt="Logo do site">
-        <h1>Green Day</h1>
-<ul>
-    <li><a href="home.html">INÍCIO</a></li>
-    <li><a href="catalogo.html">CATÁLOGO</a></li>
-    <li><a href="sobre.html">SOBRE</a></li>
-</ul>
-    </header>
-<h3> A melhor opção de filmes gratuitos para agora. </h3>
+  <header>
+    <div class="brand">
+      <img src="../assets/greendaylogo.png" alt="Logo do site">
+      <h1>Green Day</h1>
+    </div>
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li><a href="home.html">INÍCIO</a></li>
+        <li><a href="catalogo.html">CATÁLOGO</a></li>
+        <li><a href="sobre.html">SOBRE</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<h1>RECOMENDADOS</h1>
+  <main>
+    <section class="page-intro">
+      <p>A melhor opção de filmes gratuitos para agora.</p>
+    </section>
 
-<div class="recommend-section">
-  <button class="carrossel-btn btn-esquerdo" id="btn-ant">&#10094;</button>
-  <div class="aba-recomendados" id="recommended-container"></div>
-  <button class="carrossel-btn btn-direito" id="btn-prox">&#10095;</button>
-</div>
+    <h2 class="section-title">RECOMENDADOS</h2>
+    <div class="recommend-section">
+      <button class="carrossel-btn btn-esquerdo" id="btn-ant" aria-label="Filmes anteriores">&#10094;</button>
+      <div class="aba-recomendados" id="recommended-container"></div>
+      <button class="carrossel-btn btn-direito" id="btn-prox" aria-label="Próximos filmes">&#10095;</button>
+    </div>
 
-<script src="../renderer.js"></script>
+    <h2 class="section-title">ADICIONADOS RECENTEMENTE</h2>
+    <div class="recommend-section">
+      <button class="carrossel-btn btn-esquerdo" id="btn-recent-ant" aria-label="Filmes anteriores">&#10094;</button>
+      <div class="aba-recomendados" id="recent-container"></div>
+      <button class="carrossel-btn btn-direito" id="btn-recent-prox" aria-label="Próximos filmes">&#10095;</button>
+    </div>
+
+    <section class="site-info">
+      <h2>Sobre o site</h2>
+      <p>Este site reúne links de exibição através de serviços de embed. Os IDs dos filmes correspondem aos identificadores do The Movie Database (TMDb).</p>
+      <h3>Origem dos filmes</h3>
+      <p>Os metadados e imagens são baseados em informações públicas do TMDb. O player utiliza um serviço externo de embed.</p>
+      <h3>Créditos e direitos autorais</h3>
+      <p>Todos os créditos de imagens e metadados são do <a href="https://www.themoviedb.org/">TMDb</a>.</p>
+    </section>
+  </main>
+
+  <script src="../renderer.js"></script>
 </body>
 </html>
