@@ -15,27 +15,37 @@
       <img src="../assets/greendaylogo.png" alt="Logo do site">
       <h1>Green Day</h1>
     </div>
-    <nav aria-label="Navegação principal">
-      <ul>
-        <li><a href="home.html">INÍCIO</a></li>
-        <li><a href="catalogo.html">CATÁLOGO</a></li>
-        <li><a href="sobre.html">SOBRE</a></li>
-      </ul>
-    </nav>
+    <div class="header-right">
+      <nav aria-label="Navegação principal">
+        <ul>
+          <li><a href="home.html">INÍCIO</a></li>
+          <li><a href="catalogo.html">CATÁLOGO</a></li>
+          <li><a href="sobre.html">SOBRE</a></li>
+        </ul>
+      </nav>
+      <a href="../index.html" class="logout-btn">Logout</a>
+    </div>
   </header>
 
   <main>
+    <div class="card-sobre">
     <section class="page-intro">
       <h2>Sobre</h2>
       <p>Informações gerais sobre o projeto Green Day.</p>
     </section>
 
     <section class="site-info">
+      <img src="../assets/greenday.png" alt="Logo do site" class="info-logo" width="512">
+      <p>O green Day é um projeto de electron criado com o intuito de facilitar o acesso a filmes sem precisar necessariamente de um streaming.
+        criado com uma equipe de 4 pessoas em uma semana para uma atividade de ads no grau técnico.
+      </p>
+      
       <h2>Como o projeto funciona</h2>
       <p>Os filmes ficam cadastrados no arquivo <strong>renderer.js</strong>, dentro da lista <strong>movieCatalog</strong>. As páginas leem essa lista para montar automaticamente os recomendados, os recentes, o catálogo e o player.</p>
       <h3>Como editar</h3>
       <p>Para adicionar filmes, abra <strong>renderer.js</strong>, copie um objeto da lista, troque as informações e salve. As instruções estão comentadas no começo do arquivo.</p>
     </section>
+    </div>
   </main>
 
   <script src="../renderer.js"></script>

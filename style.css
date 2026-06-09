@@ -147,10 +147,17 @@ header {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 20px;
     padding: 12px 32px;
     background: linear-gradient(180deg, #0f400f 0%, #0f400f 35%, rgba(2, 3, 2, 0.96) 100%);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: auto;
 }
 
 main {
@@ -453,6 +460,25 @@ main {
     color: #37e879;
 }
 
+.logout-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    border-radius: 12px;
+    background: rgba(55, 232, 121, 0.16);
+    border: 1px solid rgba(55, 232, 121, 0.3);
+    color: #c7f7dc;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.logout-btn:hover {
+    background: rgba(55, 232, 121, 0.28);
+    color: #ffffff;
+}
+
 @media (max-width: 900px) {
     .player-header {
         flex-direction: column;
@@ -508,4 +534,24 @@ main {
         width: 100%;
         max-width: 280px;
     }
+}
+
+.card-sobre {
+    max-width: 900px;
+    margin-bottom: 10px;
+    margin: 6px auto;
+    padding: 22px;
+    border-radius: 18px;
+    border: 2px solid rgba(83, 204, 47, 0.8);
+    background: rgba(5, 16, 5, 0.72);
+    box-shadow: 0 20px 40px rgba(21, 255, 0, 0.35);
+}
+
+.card-sobre img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 16px;
+   
 }
