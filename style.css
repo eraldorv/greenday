@@ -18,9 +18,14 @@ body {
     z-index: 1;
     color: #19250a;
     top: -100px;
-    font-size: 25em;
+    left: 45%;
+    transform: translateX(-50%);
+    font-size: clamp(8rem, 25vw, 25em);
     line-height: 0.9;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
 }
 
 .container {
@@ -43,19 +48,45 @@ body {
     border-bottom: 5px solid #337401;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    width: 400px;
+    width: min(400px, 100%);
     height: 350px;
     padding: 20px;
     box-sizing: border-box;
     z-index: 2;
-   
+
 }
 
 #tela-login h2,
 #tela-cadastro h2 {
     color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
 }
 
 .hidden {
     display: none !important;
+}
+
+input:focus {
+    outline: none;
+   background-color: #466e15;
+    color: white;
+    border-color: #3f9200;
+}
+
+
+input[type=text],
+input[type=password] {
+    border-style: none;
+    border-bottom: 1px solid #337401;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #070a05;
+    height: 50px;
+    width: 100%;
+    color: #7dd837;
+}
+
+input::placeholder {
+    color: #7dd837;
 }
