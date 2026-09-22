@@ -8,60 +8,145 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+
   <div class="fundo-texto">
-    <h1 class="texto-vazado">VOCÊ NO<br>
-       CONTROLE.</h1>
+    <h1 class="texto-vazado">
+      VOCÊ NO<br>
+      CONTROLE.
+    </h1>
   </div>
+
+
+
+  <div class="logo-absolute">
+    <img src="assets/greendayplaceholder.png" alt="Logo Green Day">
+  </div>
+
+
+
   <div class="container">
+
 
     <div id="tela-login" class="box">
 
-      <h2>Login</h2>
       <div id="erro-login" class="error-box"></div>
+
+      <h2>Login</h2>
+
       <form id="form-login">
+
         <div class="input-group">
           <input type="text" id="login-email" placeholder="Digite seu e-mail">
         </div>
+
         <div class="input-group">
           <input type="password" id="login-senha" placeholder="Digite sua senha">
         </div>
-        <button type="submit" class="btn">Acessar</button>
+
+      
+        <div class="bottom-tela-login">
+
+          <button type="submit" class="btn">
+            Acessar
+          </button>
+
+          <p class="switch">
+            Não tem uma conta?
+            <a href="#" id="ir-para-cadastro">
+              Cadastre-se
+            </a>
+          </p>
+
+        </div>
+
       </form>
-      <p class="switch">Não tem uma conta? <a href="#" id="ir-para-cadastro">Cadastre-se</a></p>
+
     </div>
 
+
+
     <div id="tela-cadastro" class="box hidden">
-      <h2>Criar Conta</h2>
+
       <div id="erro-cadastro" class="error-box"></div>
+
       <div id="sucesso-cadastro" class="success-box"></div>
+
+      <h2>Criar Conta</h2>
+
       <form id="form-cadastro">
+
         <div class="input-group">
-          <label for="cad-nome">Nome completo</label>
+
+          <label for="cad-nome">
+            Nome completo
+          </label>
+
           <input type="text" id="cad-nome" placeholder="Ex: João Silva">
+
         </div>
+
+
         <div class="input-group">
-          <label for="cad-data">Data de nascimento</label>
+
+          <label for="cad-data">
+            Data de nascimento
+          </label>
+
           <input type="date" id="cad-data">
+
         </div>
+
+
         <div class="input-group">
-          <label for="cad-email">E-mail</label>
+
+          <label for="cad-email">
+            E-mail
+          </label>
+
           <input type="text" id="cad-email" placeholder="Ex: joao@email.com">
+
         </div>
+
+
         <div class="input-group">
-          <label for="cad-senha">Senha</label>
+
+          <label for="cad-senha">
+            Senha
+          </label>
+
           <input type="password" id="cad-senha" placeholder="Mínimo 6 dígitos, com letras e números">
+
         </div>
-        <button type="submit" class="btn">Finalizar cadastro</button>
+
+
+        <button type="submit" class="btn">
+          Finalizar cadastro
+        </button>
+
       </form>
-      <p class="switch">Já possui cadastro? <a href="#" id="ir-para-login">Fazer login</a></p>
+
+
+      <p class="switch">
+        Já possui cadastro?
+        <a href="#" id="ir-para-login">
+          Fazer login
+        </a>
+      </p>
+
     </div>
+
   </div>
+
+
   <script src="script.js"></script>
+
 </body>
 
 </html>

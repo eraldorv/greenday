@@ -1,8 +1,11 @@
 html {
     min-height: 100%;
-    background: linear-gradient(49deg,
-            rgb(6, 7, 5) 35%,
-            rgb(25, 37, 10) 100%);
+
+    background: linear-gradient(
+        49deg,
+        rgb(5, 7, 5) 35%,
+        rgb(10, 37, 10) 100%
+    );
 }
 
 body {
@@ -16,14 +19,14 @@ body {
 .texto-vazado {
     position: absolute;
     z-index: 1;
-    color: #19250a;
+    color: #0c250a;
     top: -100px;
-    left: 45%;
+    left: 50%;
     transform: translateX(-50%);
+    width: 100%;
     font-size: clamp(8rem, 25vw, 25em);
     line-height: 0.9;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    white-space: nowrap;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     pointer-events: none;
     user-select: none;
 }
@@ -34,59 +37,195 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 #tela-login,
 #tela-cadastro {
-    text-align: center;
     display: flex;
     flex-direction: column;
-    background-color: #070a05;
-    border-top: 1px solid #3f9200;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom: 5px solid #337401;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    background-color: #070e07;
+    border-radius: 4px;
     width: min(400px, 100%);
-    height: 350px;
-    padding: 20px;
+    min-height: 350px;
+    height: auto;
+    padding: 15px;
     box-sizing: border-box;
     z-index: 2;
+}
 
+#tela-cadastro {
+    gap: 10px;
 }
 
 #tela-login h2,
 #tela-cadastro h2 {
     color: #ffffff;
-    font-family: "Roboto", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
+    text-align: center;
+}
+
+#erro-login,
+#erro-cadastro {
+    color: #ffffff;
+}
+
+#form-cadastro {
+    color: #ffffff;
 }
 
 .hidden {
     display: none !important;
 }
 
-input:focus {
-    outline: none;
-   background-color: #466e15;
-    color: white;
-    border-color: #3f9200;
+#form-login {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
+input:focus {
+    outline: none;
+}
 
-input[type=text],
-input[type=password] {
-    border-style: none;
-    border-bottom: 1px solid #337401;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    background-color: #070a05;
+input[type="text"],
+input[type="password"],
+input[type="date"] {
+    margin-top: 3px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0c1a0c36;
     height: 50px;
     width: 100%;
-    color: #7dd837;
+    color: #ffffff;
+    box-sizing: border-box;
 }
 
 input::placeholder {
-    color: #7dd837;
+    color: #ffffff;
+    text-align: center;
+}
+
+.btn {
+    margin-top: 20px;
+    border: none;
+    background-color: #05dd05;
+    color: #000000;
+    padding: 15px;
+    text-align: center;
+    width: min(300px, 100%);
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #54dd05;
+}
+
+.bottom-tela-login {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.switch {
+    font-size: 12px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.switch a {
+    color: #05dd05;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.switch a:hover {
+    color: #54dd05;
+}
+
+.logo-absolute {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50px;
+    transform: translateX(-50%);
+    flex-direction: column;
+    pointer-events: none;
+    user-select: none;
+}
+
+.logo-absolute img {
+    width: min(300px, 70vw);
+    height: auto;
+}
+
+
+/*monitor menor*/
+
+@media (max-width: 1200px) {
+
+    .texto-vazado {
+        font-size: 18rem;
+        top: -80px;
+    }
+    .logo-absolute {
+        top: 50px;
+    }
+    .logo-absolute img {
+        width: min(200px, 70vw);
+    }
+}
+
+
+/*notebook*/
+
+@media (max-width: 720px) {
+
+    .texto-vazado {
+        font-size: 14rem;
+        top: -120px;
+    }
+    .logo-absolute {
+        top: 50px;
+    }
+    .logo-absolute img {
+        width: min(200px, 70vw);
+    }
+}
+
+/*celular*/
+
+@media (max-width: 600px) {
+
+    .texto-vazado {
+        font-size: 9rem;
+        top: -40px;
+    }
+    .logo-absolute {
+        top: 50px;
+    }
+    .logo-absolute img {
+        width: min(180px, 65vw);
+    }
+
+    #tela-login,
+    #tela-cadastro {
+        width: 100%;
+        max-width: 400px;
+        padding: 15px;
+    }
+
+    #tela-login h2,
+    #tela-cadastro h2 {
+        font-size: 26px;
+    }
 }
