@@ -17,6 +17,7 @@
 //   runtime: 136,
 //   overview: 'Sinopse curta do filme.'
 // }
+
 const movieCatalog = [
   { id: 550, title: 'Fight Club', year: 1999, poster: '/a26cQPRhJPX6GbWfQbvZdrrp9j9.jpg', rating: '8.8', genres: ['Drama'], runtime: 139, overview: 'Um homem insatisfeito com sua vida se envolve em um clube secreto de luta que muda sua percepção do mundo.' },
   { id: 278, title: 'The Shawshank Redemption', year: 1994, poster: '/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg', rating: '9.3', genres: ['Drama', 'Crime'], runtime: 142, overview: 'A história de um homem condenado à prisão perpétua que encontra esperança e amizade dentro de Shawshank.' },

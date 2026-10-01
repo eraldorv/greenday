@@ -1,11 +1,9 @@
 html {
     min-height: 100%;
 
-    background: linear-gradient(
-        49deg,
-        rgb(5, 7, 5) 35%,
-        rgb(10, 37, 10) 100%
-    );
+    background: linear-gradient(49deg,
+            #050705 35%,
+            #0a250a 100%);
 }
 
 body {
@@ -90,6 +88,7 @@ input:focus {
     outline: none;
 }
 
+
 input[type="text"],
 input[type="password"],
 input[type="date"] {
@@ -100,11 +99,20 @@ input[type="date"] {
     height: 50px;
     width: 100%;
     color: #ffffff;
+    font-size: 12px;
     box-sizing: border-box;
 }
 
+label[for=cad-nome],
+label[for=cad-data],
+label[for=cad-email],
+label[for=cad-senha] {
+    font-size: 12px;
+}
+
+
 input::placeholder {
-    color: #ffffff;
+    color: #bbffc170;
     text-align: center;
 }
 
@@ -168,18 +176,113 @@ input::placeholder {
     height: auto;
 }
 
+header {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left nav ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header-left nav li {
+    list-style: none;
+}
+
+.header-left nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.brand {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.brand h1 {
+    margin: 0;
+    color: white;
+    font-size: 42px;
+    letter-spacing: 2px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.brand p {
+    color: white;
+}
+
+
+.header-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.logout-btn {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.aba-recomendados {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+.recommend-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.recommend-section img{
+    width: 200px;
+    height: 280px;
+}
+
+.movie-card {
+    flex: 0 0 200px;
+}
+
+.carrossel-btn,.carrossel-btn {
+    height: 280px;
+}
 
 /*monitor menor*/
 
-@media (max-width: 1200px) {
+@media (max-width: 1360px) {
 
     .texto-vazado {
         font-size: 18rem;
         top: -80px;
     }
+
     .logo-absolute {
         top: 50px;
     }
+
     .logo-absolute img {
         width: min(200px, 70vw);
     }
@@ -194,9 +297,11 @@ input::placeholder {
         font-size: 14rem;
         top: -120px;
     }
+
     .logo-absolute {
         top: 50px;
     }
+
     .logo-absolute img {
         width: min(200px, 70vw);
     }
@@ -210,9 +315,11 @@ input::placeholder {
         font-size: 9rem;
         top: -40px;
     }
+
     .logo-absolute {
         top: 50px;
     }
+
     .logo-absolute img {
         width: min(180px, 65vw);
     }
