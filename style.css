@@ -224,10 +224,10 @@ header {
     letter-spacing: 2px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
 .brand p {
     color: white;
 }
-
 
 .header-right {
     margin-left: auto;
@@ -257,7 +257,7 @@ header {
     width: 100%;
 }
 
-.recommend-section img{
+.recommend-section img {
     width: 200px;
     height: 280px;
 }
@@ -266,8 +266,38 @@ header {
     flex: 0 0 200px;
 }
 
-.carrossel-btn,.carrossel-btn {
-    height: 280px;
+a {
+    text-decoration: none;
+}
+
+.movie-card-content {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+
+.nota-filme {
+    font-family: monospace;
+    margin-bottom: 10px;
+}
+
+.carrossel-btn,
+.carrossel-btn {
+    height: 250px;
+    width: 40px;
+
+    background-color: transparent;
+    color: #05DD05;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 24px;
+    cursor: pointer;
+
+    align-self: stretch;
+    min-height: 280px;
+    width: 40px;
 }
 
 /*monitor menor*/
