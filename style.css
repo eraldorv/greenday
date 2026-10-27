@@ -117,17 +117,52 @@ input::placeholder {
 }
 
 .btn {
-    margin-top: 20px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+
+    width: 50px;
+    min-height: 280px;
     border: none;
-    background-color: #05dd05;
-    color: #000000;
-    padding: 15px;
-    text-align: center;
-    width: min(300px, 100%);
-    border-radius: 5px;
-    box-sizing: border-box;
+    color: #05dd05;
+    font-size: 24px;
     cursor: pointer;
-    transition: 0.2s ease;
+}
+
+.carrossel-btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 65px;
+    min-height: 280px;
+    height: auto;
+    padding: 0;
+    border: none;
+    color: #05dd05;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.btn-esquerdo {
+    left: 0;
+    background: linear-gradient(to right,
+            rgba(5, 7, 5, 0.795) 0%,
+            rgba(5, 7, 5, 0.473) 50%,
+            transparent 100%);
+}
+
+.btn-direito {
+    right: 0;
+    background: linear-gradient(to left,
+            rgba(5, 7, 5, 0.795) 0%,
+            rgba(5, 7, 5, 0.473) 50%,
+            transparent 100%);
+}
+
+.carrossel-btn:hover {
+    color: #54dd05;
 }
 
 .btn:hover {
@@ -184,6 +219,7 @@ header {
     align-items: center;
     padding: 0 30px;
     box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .header-left {
@@ -213,8 +249,11 @@ header {
 .brand {
     position: absolute;
     left: 50%;
-    top: 80%;
+    top: 90%;
     transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .brand h1 {
@@ -223,10 +262,16 @@ header {
     font-size: 42px;
     letter-spacing: 2px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    white-space: nowrap;
 }
 
 .brand p {
     color: white;
+    font-family: "Monsieur La Doulaise", cursive;
+    font-size: 30px;
+    margin: -8px 0 0;
+    transform: translateY(-10px);
+    white-space: nowrap;
 }
 
 .header-right {
@@ -241,21 +286,30 @@ header {
     font-size: 14px;
 }
 
+.recommend-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
 .aba-recomendados {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    overflow-x: hidden;
+    width: 100%;
+    flex: 1;
+    min-width: 0;
+    overflow-x: auto;
     overflow-y: hidden;
     scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
-.recommend-section {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    width: 100%;
+.aba-recomendados::-webkit-scrollbar {
+    display: none;
 }
+
 
 .recommend-section img {
     width: 200px;
@@ -298,6 +352,11 @@ a {
     align-self: stretch;
     min-height: 280px;
     width: 40px;
+}
+
+.section-title {
+    color: #FFFFFF;
+    margin-left: 30px;
 }
 
 /*monitor menor*/
