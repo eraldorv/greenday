@@ -41,19 +41,63 @@
 
       <section class="site-info">
         <img src="../assets/greenday.png" alt="Logo do site" class="info-logo" width="512">
-        <p>O green Day é um projeto de electron criado com o intuito de facilitar o acesso a filmes sem precisar
-          necessariamente de um streaming.
-          criado com uma equipe de 4 pessoas em uma semana para uma atividade de ads no grau técnico.
+        <h2>Sobre o Green Day</h2>
+
+        <p>
+          O Green Day é um projeto desenvolvido em Electron com o objetivo
+          de facilitar o acesso a informações sobre filmes e à sua exibição
+          por meio de serviços externos de embed, sem depender necessariamente
+          de uma plataforma de streaming convencional.
+        </p>
+
+        <p>
+          O projeto foi desenvolvido por uma equipe de quatro pessoas em uma
+          semana, como atividade do curso técnico em Análise e Desenvolvimento
+          de Sistemas (ADS).
         </p>
 
         <h2>Como o projeto funciona</h2>
-        <p>Os filmes ficam cadastrados no arquivo <strong>renderer.js</strong>, dentro da lista
-          <strong>movieCatalog</strong>. As páginas leem essa lista para montar automaticamente os recomendados, os
-          recentes, o catálogo e o player.
+
+        <p>
+          Os filmes são cadastrados no arquivo <strong>renderer.js</strong>,
+          dentro da lista <strong>movieCatalog</strong>. A partir desses dados,
+          o sistema organiza automaticamente as seções de recomendados,
+          adicionados recentemente, catálogo e player.
         </p>
-        <h3>Como editar</h3>
-        <p>Para adicionar filmes, abra <strong>renderer.js</strong>, copie um objeto da lista, troque as informações e
-          salve. As instruções estão comentadas no começo do arquivo.</p>
+
+        <h3>Como editar o catálogo</h3>
+
+        <p>
+          Para adicionar ou modificar filmes, abra o arquivo
+          <strong>renderer.js</strong>, localize a lista
+          <strong>movieCatalog</strong> e edite um dos objetos existentes
+          ou copie sua estrutura para cadastrar um novo filme.
+          As instruções para edição estão comentadas no início do arquivo.
+        </p>
+      </section>
+
+      <section class="site-info">
+        <h2>Informações e créditos</h2>
+
+        <p>
+          Os identificadores dos filmes correspondem aos registros do
+          The Movie Database (TMDb), que também serve como fonte para
+          os metadados e as imagens utilizados no projeto.
+        </p>
+
+        <p>
+          A exibição dos filmes utiliza um serviço externo de embed.
+        </p>
+
+        <h3>Créditos e direitos autorais</h3>
+
+        <p>
+          Os metadados e as imagens utilizados são atribuídos às respectivas
+          fontes, incluindo o
+          <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">The Movie Database (TMDb)</a>.
+          Os direitos sobre os filmes e demais materiais audiovisuais
+          pertencem aos seus respectivos titulares.
+        </p>
       </section>
     </div>
   </main>

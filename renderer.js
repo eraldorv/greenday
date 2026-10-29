@@ -18,31 +18,240 @@
 //   overview: 'Sinopse curta do filme.'
 // }
 
+
 const movieCatalog = [
-  { id: 550, title: 'Fight Club', year: 1999, poster: '/a26cQPRhJPX6GbWfQbvZdrrp9j9.jpg', rating: '8.8', genres: ['Drama'], runtime: 139, overview: 'Um homem insatisfeito com sua vida se envolve em um clube secreto de luta que muda sua percepção do mundo.' },
-  { id: 278, title: 'The Shawshank Redemption', year: 1994, poster: '/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg', rating: '9.3', genres: ['Drama', 'Crime'], runtime: 142, overview: 'A história de um homem condenado à prisão perpétua que encontra esperança e amizade dentro de Shawshank.' },
-  { id: 238, title: 'The Godfather', year: 1972, poster: '/rPdtLWNsZmAtoZl9PK7S2wE3qiS.jpg', rating: '9.2', genres: ['Crime', 'Drama'], runtime: 175, overview: 'A saga da família Corleone e o conflito de honra, poder e lealdade na máfia americana.' },
-  { id: 680, title: 'Pulp Fiction', year: 1994, poster: '/dM2w364MScsjFf8pfMbaWUcWrR.jpg', rating: '8.9', genres: ['Crime', 'Drama'], runtime: 154, overview: 'Várias histórias entrelaçadas de criminosos, boxeadores e gangsters em Los Angeles.' },
-  { id: 27205, title: 'Inception', year: 2010, poster: '/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg', rating: '8.8', genres: ['Ação', 'Ficção científica'], runtime: 148, overview: 'Um ladrão entra em sonhos para roubar segredos e recebe a missão de implantar uma ideia na mente de alguém.' },
-  { id: 155, title: 'The Dark Knight', year: 2008, poster: '/qJ2tW6WMUDux911r6m7haRef0WH.jpg', rating: '9.0', genres: ['Ação', 'Crime'], runtime: 152, overview: 'Batman enfrenta o caos de Gotham enquanto o Coringa ameaça destruir a cidade.' },
-  { id: 13, title: 'Forrest Gump', year: 1994, poster: '/clolk7rB5lAjs41SD0Vt6IXYLMm.jpg', rating: '8.8', genres: ['Drama', 'Romance'], runtime: 142, overview: 'A vida incrível de Forrest Gump, um homem gentil que testemunha momentos históricos sem perceber seu impacto.' },
-  { id: 157336, title: 'Interstellar', year: 2014, poster: '/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg', rating: '8.6', genres: ['Aventura', 'Drama', 'Ficção científica'], runtime: 169, overview: 'Um grupo de exploradores viaja por um buraco de minhoca para encontrar um novo lar para a humanidade.' },
-  { id: 603, title: 'The Matrix', year: 1999, poster: '/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg', rating: '8.7', genres: ['Ação', 'Ficção científica'], runtime: 136, overview: 'Um hacker descobre que o mundo é uma simulação e se junta à resistência para libertar a humanidade.' },
-  { id: 11, title: 'Star Wars: A New Hope', year: 1977, poster: '/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg', rating: '8.6', genres: ['Ação', 'Aventura', 'Fantasia'], runtime: 121, overview: 'Luke Skywalker se junta à Princesa Leia e outros rebeldes para destruir a Estrela da Morte.' },
-  { id: 122, title: 'Jurassic Park', year: 1993, poster: '/c414cDeQ9b6qLPLeKmiJuLDUREJ.jpg', rating: '8.1', genres: ['Aventura', 'Ficção científica'], runtime: 127, overview: 'Um parque temático com dinossauros geneticamente criados se torna uma luta pela sobrevivência.' },
-  { id: 497, title: 'The Green Mile', year: 1999, poster: '/velWPhVMQeQKcxggNEU8YmIo52R.jpg', rating: '8.6', genres: ['Drama', 'Fantasia'], runtime: 189, overview: 'O guarda de uma prisão descobre que um prisioneiro condenado possui poderes milagrosos.' },
-  { id: 24428, title: 'The Avengers', year: 2012, poster: '/RYMX2wcKCBArLQsfhcrQK4w8eT.jpg', rating: '8.0', genres: ['Ação', 'Ficção científica'], runtime: 143, overview: 'Heróis como Homem de Ferro, Capitão América e Thor se unem para salvar a Terra de uma invasão alienígena.' },
-  { id: 671, title: 'Harry Potter and the Sorcerer\'s Stone', year: 2001, poster: '/dCtFvscYcXQKTNVRMoO6B2Pt3NJ.jpg', rating: '7.6', genres: ['Aventura', 'Fantasia'], runtime: 152, overview: 'Harry Potter descobre que é um bruxo e começa sua primeira aventura em Hogwarts.' },
-  { id: 78, title: 'Blade Runner', year: 1982, poster: '/gajva2L0rPYkEWj7b5W7kuT4X1.jpg', rating: '8.1', genres: ['Ficção científica', 'Suspense'], runtime: 117, overview: 'Um caçador de androides é enviado para perseguir replicantes fugitivos em uma Los Angeles futurista.' },
-  { id: 807, title: 'Se7en', year: 1995, poster: '/69Sns8WoET6CfaYlIkHbla4l7nC.jpg', rating: '8.6', genres: ['Crime', 'Mistério', 'Suspense'], runtime: 127, overview: 'Dois detetives perseguem um serial killer que usa os sete pecados capitais como inspiração.' },
-  { id: 120, title: 'The Lord of the Rings: The Fellowship of the Ring', year: 2001, poster: '/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg', rating: '8.8', genres: ['Aventura', 'Fantasia'], runtime: 178, overview: 'Frodo e seus amigos partem para destruir um anel maligno capaz de dominar o mundo.' },
-  { id: 240, title: 'The Godfather: Part II', year: 1974, poster: '/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg', rating: '9.0', genres: ['Crime', 'Drama'], runtime: 200, overview: 'A continuação da saga da família Corleone, mostrando Michael Corleone fortalecendo sua posição.' },
-  { id: 272, title: 'Batman Begins', year: 2005, poster: '/1P3ZyEq02wcTMd3iE4ebtLvncvH.jpg', rating: '8.2', genres: ['Ação', 'Crime'], runtime: 140, overview: 'A origem de Batman enquanto ele aprende a enfrentar o medo e proteger Gotham.' },
-  { id: 389, title: '12 Angry Men', year: 1957, poster: '/7sf9CgJz30aXDvrg7DYYUQ2U91T.jpg', rating: '9.0', genres: ['Drama'], runtime: 96, overview: 'Doze jurados debatem um caso de homicídio que ameaça condenar um jovem inocente.' },
-  { id: 27259, title: 'Terminator 2: Judgment Day', year: 1991, poster: '/a7CDEyAIYb8e8hJyh5VnUWEf6Et.jpg', rating: '8.5', genres: ['Ação', 'Ficção científica'], runtime: 137, overview: 'Um exterminador protege um jovem que será o líder da resistência no futuro.' },
-  { id: 244786, title: 'Whiplash', year: 2014, poster: '/6k2l9gWf7gF2bYLxIH6p4k1LxL4.jpg', rating: '8.5', genres: ['Drama', 'Música'], runtime: 106, overview: 'Um baterista ambicioso enfrenta um professor exigente para se tornar um músico melhor.' },
-  { id: 1124, title: 'The Prestige', year: 2006, poster: '/5MXyQfz8xUP3dIFPTubhTsbFy.jpg', rating: '8.5', genres: ['Drama', 'Mistério', 'Ficção científica'], runtime: 130, overview: 'Dois mágicos rivais fazem de tudo para criar o melhor truque de todos os tempos.' }
+  {
+    id: 299536,
+    title: 'Avengers: Infinity War',
+    year: 2018,
+    poster: '/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg',
+    rating: '8.2',
+    genres: ['Ação', 'Aventura', 'Ficção científica'],
+    runtime: 149,
+    overview: 'Os Vingadores e seus aliados tentam impedir Thanos de reunir as Joias do Infinito.'
+  },
+  {
+    id: 324857,
+    title: 'Spider-Man: Into the Spider-Verse',
+    year: 2018,
+    poster: '/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg',
+    rating: '8.4',
+    genres: ['Animação', 'Ação', 'Aventura'],
+    runtime: 117,
+    overview: 'Miles Morales se torna o Homem-Aranha e encontra versões do herói vindas de outros universos.'
+  },
+  {
+    id: 424694,
+    title: 'Bohemian Rhapsody',
+    year: 2018,
+    poster: '/lHu1wtNaczFPGFDTrjCSzeLPTKN.jpg',
+    rating: '8.0',
+    genres: ['Drama', 'Música'],
+    runtime: 135,
+    overview: 'A trajetória do Queen e de Freddie Mercury, desde a formação da banda até sua apresentação no Live Aid.'
+  },
+  {
+    id: 299534,
+    title: 'Avengers: Endgame',
+    year: 2019,
+    poster: '/or06FN3Dka5tukK1e9sl16pB3iy.jpg',
+    rating: '8.3',
+    genres: ['Ação', 'Aventura', 'Drama'],
+    runtime: 181,
+    overview: 'Após uma derrota devastadora, os heróis restantes tentam restaurar o universo.'
+  },
+  {
+    id: 420818,
+    title: 'The Lion King',
+    year: 2019,
+    poster: '/dzBtMocZuJbjLOXvrl4zGYigDzh.jpg',
+    rating: '7.1',
+    genres: ['Aventura', 'Drama', 'Animação'],
+    runtime: 118,
+    overview: 'Simba precisa enfrentar seu passado e assumir seu lugar como rei das Terras do Reino.'
+  },
+  {
+    id: 429617,
+    title: 'Spider-Man: Far From Home',
+    year: 2019,
+    poster: '/4q2NNj4S5dG2RLF9CpXsej7yXl.jpg',
+    rating: '7.4',
+    genres: ['Ação', 'Aventura', 'Ficção científica'],
+    runtime: 129,
+    overview: 'Peter Parker tenta aproveitar uma viagem escolar enquanto enfrenta uma nova ameaça.'
+  },
+  {
+    id: 530915,
+    title: '1917',
+    year: 2019,
+    poster: '/iZf0KyrE25z1sage4SYFLCCrMi9.jpg',
+    rating: '8.0',
+    genres: ['Guerra', 'Drama'],
+    runtime: 119,
+    overview: 'Dois soldados recebem uma missão urgente para atravessar território inimigo durante a Primeira Guerra Mundial.'
+  },
+  {
+    id: 475557,
+    title: 'Joker',
+    year: 2019,
+    poster: '/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg',
+    rating: '8.2',
+    genres: ['Drama', 'Suspense', 'Crime'],
+    runtime: 122,
+    overview: 'Um homem marginalizado enfrenta o abandono social enquanto sua vida toma um rumo sombrio.'
+  },
+  {
+    id: 508439,
+    title: 'Onward',
+    year: 2020,
+    poster: '/osZRYJ1TmL2o5KAHAmh0HRCoLFp.jpg',
+    rating: '7.6',
+    genres: ['Animação', 'Aventura', 'Fantasia'],
+    runtime: 102,
+    overview: 'Dois irmãos elfos embarcam em uma jornada mágica para passar mais um dia com o pai.'
+  },
+  {
+    id: 545611,
+    title: 'Everything Everywhere All at Once',
+    year: 2022,
+    poster: '/w3LxiVYdWWRvEVdn5RYq6jIqkb1.jpg',
+    rating: '7.8',
+    genres: ['Ação', 'Aventura', 'Ficção científica'],
+    runtime: 139,
+    overview: 'Uma mulher comum descobre conexões entre universos paralelos e precisa enfrentar uma ameaça extraordinária.'
+  },
+  {
+    id: 508442,
+    title: 'Soul',
+    year: 2020,
+    poster: '/hm58Jw4Lw8OIeECIq5qyPYhAeRJ.jpg',
+    rating: '8.1',
+    genres: ['Animação', 'Drama', 'Fantasia'],
+    runtime: 100,
+    overview: 'Um professor de música embarca em uma jornada que o faz refletir sobre propósito e paixão.'
+  },
+  {
+    id: 497698,
+    title: 'Black Widow',
+    year: 2021,
+    poster: '/kwB7d51AIcyzPOBOHLCEZJkmPhQ.jpg',
+    rating: '7.2',
+    genres: ['Ação', 'Aventura', 'Ficção científica'],
+    runtime: 134,
+    overview: 'Natasha Romanoff confronta seu passado e reencontra pessoas ligadas à sua antiga vida.'
+  },
+  {
+    id: 566525,
+    title: 'Shang-Chi and the Legend of the Ten Rings',
+    year: 2021,
+    poster: '/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg',
+    rating: '7.5',
+    genres: ['Ação', 'Aventura', 'Fantasia'],
+    runtime: 132,
+    overview: 'Shang-Chi precisa confrontar o legado de sua família e os poderes dos Dez Anéis.'
+  },
+  {
+    id: 438631,
+    title: 'Dune',
+    year: 2021,
+    poster: '/d5NXSklXo0qyIYkgV94XAgMIckC.jpg',
+    rating: '8.0',
+    genres: ['Ficção científica', 'Aventura', 'Drama'],
+    runtime: 155,
+    overview: 'Paul Atreides viaja para Arrakis, um planeta desértico fundamental para o futuro da humanidade.'
+  },
+  {
+    id: 634649,
+    title: 'Spider-Man: No Way Home',
+    year: 2021,
+    poster: '/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg',
+    rating: '8.0',
+    genres: ['Ação', 'Aventura', 'Ficção científica'],
+    runtime: 148,
+    overview: 'Após sua identidade ser revelada, Peter Parker enfrenta consequências que ameaçam o multiverso.'
+  },
+  {
+    id: 524434,
+    title: 'Eternals',
+    year: 2021,
+    poster: '/lFByFSLV5WDJEv3KabbdAF959F2.jpg',
+    rating: '6.3',
+    genres: ['Ação', 'Aventura', 'Fantasia'],
+    runtime: 156,
+    overview: 'Um grupo de seres imortais retorna para proteger a humanidade de uma ameaça ancestral.'
+  },
+  {
+    id: 438148,
+    title: 'Minions: The Rise of Gru',
+    year: 2022,
+    poster: '/wKiOkZTN9lUUUNZLmtnwubZYONg.jpg',
+    rating: '7.3',
+    genres: ['Animação', 'Comédia', 'Aventura'],
+    runtime: 87,
+    overview: 'O jovem Gru sonha em se tornar um grande vilão e conta com a ajuda dos Minions.'
+  },
+  {
+    id: 361743,
+    title: 'Top Gun: Maverick',
+    year: 2022,
+    poster: '/62HCnUTziyWcpDaBO2i1DX17ljH.jpg',
+    rating: '8.2',
+    genres: ['Ação', 'Drama'],
+    runtime: 130,
+    overview: 'Maverick treina uma nova geração de pilotos para uma missão aérea de alto risco.'
+  },
+  {
+    id: 436270,
+    title: 'Black Adam',
+    year: 2022,
+    poster: '/pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg',
+    rating: '6.9',
+    genres: ['Ação', 'Fantasia', 'Ficção científica'],
+    runtime: 125,
+    overview: 'Um ser com poderes extraordinários desperta após milhares de anos e desafia a ordem estabelecida.'
+  },
+  {
+    id: 616037,
+    title: 'Thor: Love and Thunder',
+    year: 2022,
+    poster: '/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg',
+    rating: '6.5',
+    genres: ['Ação', 'Aventura', 'Fantasia'],
+    runtime: 119,
+    overview: 'Thor embarca em uma jornada para enfrentar uma ameaça que coloca deuses em perigo.'
+  },
+  {
+    id: 76600,
+    title: 'Avatar: The Way of Water',
+    year: 2022,
+    poster: '/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg',
+    rating: '7.6',
+    genres: ['Ficção científica', 'Aventura', 'Ação'],
+    runtime: 192,
+    overview: 'Jake Sully e Neytiri protegem sua família e buscam refúgio entre os povos dos oceanos de Pandora.'
+  },
+  {
+    id: 675353,
+    title: 'Sonic the Hedgehog 2',
+    year: 2022,
+    poster: '/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg',
+    rating: '7.5',
+    genres: ['Ação', 'Aventura', 'Comédia'],
+    runtime: 122,
+    overview: 'Sonic se une a Tails para enfrentar Robotnik e seu novo aliado, Knuckles.'
+  },
+  {
+    id: 3617430,
+    title: 'The Batman',
+    year: 2022,
+    poster: '/74xTEgt7R36Fpooo50r9T25onhq.jpg',
+    rating: '7.8',
+    genres: ['Crime', 'Mistério', 'Ação'],
+    runtime: 176,
+    overview: 'Batman investiga uma série de crimes em Gotham e descobre uma conspiração ligada à elite da cidade.'
+  }
 ];
+
 
 const POSTER_BASE_URL = 'https://image.tmdb.org/t/p/original';
 const FALLBACK_POSTER = '../assets/placeholder.png';
